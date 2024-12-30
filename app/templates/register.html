@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', path='index.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="../static/index.css"> -->
+</head>
+<body>
+    <div class="box" style="height: 600px;">
+        <span class="borderline"></span>
+        <form action="{{ url_for('signup') }}" method="post" id="register">
+            <h2>Sigin Up</h2>
+            <div class="inputbox">
+                <input type="text" name="name" placeholder="frist_name surname" required="required">
+                <span>name</span>
+            </div>
+            <div class="inputbox">
+                <input type="email" name="email" placeholder="email" required="required">
+                <span>email</span>
+            </div>
+            <div class="inputbox">
+                <input type="text" name="username" placeholder="Usuário" required="required">
+                <span>username</span>
+            </div>
+            <div class="inputbox">
+                <input type="password" name="passwd" placeholder="Senha" required="required">
+                <span>password</span>
+            </div>
+            <div class="inputbox">
+                <input type="password" name="confirmPasswd" placeholder="Senha" required="required">
+                <span>confirm-passwd</span>
+            </div>
+
+            <div class="links">
+                <a href="{{ url_for('signin') }}">Login</a>
+            </div>
+            <button type="submit" id="reg">Cadastrar</button>
+        </form>
+    </div>
+    
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', path='/signup.js') }}"></script>
+    <!-- <script src="../static/index.js"></script> -->
+</body>
+</html>

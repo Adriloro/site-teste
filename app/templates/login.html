@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', path='index.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="../static/index.css"> -->
+</head>
+<body>
+    <div class="box">
+        <span class="borderline"></span>
+        <form action="{{ url_for('signin') }}" method="post" id="login">
+            <h2>Login</h2>
+            <div class="inputbox">
+                <input type="text" name="username" placeholder="Usuário" required="required">
+                <span>username</span>
+            </div>
+            <div class="inputbox">
+                <input type="password" name="passwd" placeholder="Senha" required="required">
+                <span>password</span>
+            </div>
+
+            <div class="links">
+                <a href="{{ url_for('register') }}">Registre-se</a>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', path='/login.js') }}"></script>
+    <!-- <script src="../static/index.js"></script> -->
+</body>
+</html>
